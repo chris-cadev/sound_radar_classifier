@@ -1,0 +1,34 @@
+[project]
+authors = [
+  {name = "Christian Camacho", email = "chris@chrislabs.net"},
+]
+dependencies = [
+    "fastapi[standard]>=0.135.1",
+    "sqlalchemy>=2.0.48",
+    "jinja2>=3.1",
+    "python-dotenv>=1.0",
+    "pydantic-settings>=2.0",
+    "httpx>=0.27",
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+    "aiosqlite>=0.22.1",
+]
+description = "Sound Radar Classifier - Locate sounds using microphone arrays"
+license = {text = "MIT"}
+name = "sound-radar-classifier"
+readme = "README.md"
+requires-python = ">=3.12"
+version = "0.1.0"
+
+[build-system]
+build-backend = "pdm.backend"
+requires = ["pdm-backend"]
+
+[tool.pdm.scripts]
+prod = "uvicorn sound_radar_classifier.app:app --host 0.0.0.0 --port 9091"
+start = "fastapi dev src/sound_radar_classifier/app.py"
+test = "pytest -v --cov=sound_radar_classifier --cov-report=term-missing --cov-report=html:coverage_html --cov-report=json:coverage_html/coverage.json"
+watch = "bun run watch"
+
+[tool.pdm]
+distribution = true

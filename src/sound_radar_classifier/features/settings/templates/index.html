@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="prose max-w-none">
+    <h2>Settings</h2>
+    <p>Configure your Sound Radar Classifier preferences.</p>
+
+    <div class="card bg-base-200 shadow-xl mt-4">
+        <div class="card-body">
+            <h3 class="card-title">General Settings</h3>
+            <form>
+                <div class="form-control">
+                    <label class="label" for="detection-threshold">
+                        <span class="label-text">Detection Threshold</span>
+                    </label>
+                    <input type="range" min="0" max="100" value="50" class="range range-primary"
+                        id="detection-threshold" />
+                </div>
+                <div class="form-control mt-4">
+                    <label class="label cursor-pointer">
+                        <span class="label-text">Enable Notifications</span>
+                        <input type="checkbox" class="toggle toggle-primary" checked />
+                    </label>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
