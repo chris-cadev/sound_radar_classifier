@@ -13,3 +13,9 @@ if not DATABASE_URL.startswith("sqlite+aiosqlite://") and not DATABASE_URL.start
 AUDIO_DEVICE = os.environ.get("AUDIO_DEVICE", "default")
 SAMPLE_RATE = int(os.environ.get("SAMPLE_RATE", "44100"))
 CHUNK_SIZE = int(os.environ.get("CHUNK_SIZE", "1024"))
+
+DETECTION_THRESHOLD = float(os.environ.get("DETECTION_THRESHOLD", "0.01"))
+SPEED_OF_SOUND = float(os.environ.get("SPEED_OF_SOUND", "343.0"))
+TEMPERATURE = float(os.environ.get("TEMPERATURE", "20.0"))
+MAX_RANGE = float(os.environ.get("MAX_RANGE", "50.0"))
+LOGARITHMIC_SCALE = os.environ.get("LOGARITHMIC_SCALE", "true").lower() == "true"

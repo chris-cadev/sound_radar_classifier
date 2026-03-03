@@ -12,6 +12,7 @@ dependencies = [
     "pytest>=8.0",
     "pytest-asyncio>=0.23",
     "aiosqlite>=0.22.1",
+    "alembic>=1.13",
 ]
 description = "Sound Radar Classifier - Locate sounds using microphone arrays"
 license = {text = "MIT"}
@@ -29,6 +30,10 @@ prod = "uvicorn sound_radar_classifier.app:app --host 0.0.0.0 --port 9091"
 start = "fastapi dev src/sound_radar_classifier/app.py"
 test = "pytest -v --cov=sound_radar_classifier --cov-report=term-missing --cov-report=html:coverage_html --cov-report=json:coverage_html/coverage.json"
 watch = "bun run watch"
+migrate = "alembic upgrade head"
+migration_create = "alembic revision --autogenerate -m"
+build = "bun run build"
+post_install = "bun install"
 
 [tool.pdm]
 distribution = true

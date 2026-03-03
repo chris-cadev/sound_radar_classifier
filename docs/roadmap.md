@@ -26,14 +26,14 @@ This roadmap outlines the development phases for the Sound Radar Classifier proj
 
 **Goal:** Create database models and settings infrastructure.
 
-- [ ] Create `src/sound_radar_classifier/features/audio/__init__.py`
-- [ ] Create `src/sound_radar_classifier/features/audio/models.py` - Microphone model
-- [ ] Create `src/sound_radar_classifier/features/radar/__init__.py`
-- [ ] Create `src/sound_radar_classifier/features/radar/models.py` - SoundEvent model
-- [ ] Create `src/sound_radar_classifier/features/settings/__init__.py`
-- [ ] Create `src/sound_radar_classifier/features/settings/models.py` - Settings model
-- [ ] Run database migrations to create tables
-- [ ] Verify models can be created/queried
+- [x] Create `src/sound_radar_classifier/features/audio/__init__.py`
+- [x] Create `src/sound_radar_classifier/features/audio/models.py` - Microphone model
+- [x] Create `src/sound_radar_classifier/features/radar/__init__.py`
+- [x] Create `src/sound_radar_classifier/features/radar/models.py` - SoundEvent model
+- [x] Create `src/sound_radar_classifier/features/settings/__init__.py`
+- [x] Create `src/sound_radar_classifier/features/settings/models.py` - Settings model
+- [x] Run database migrations to create tables
+- [x] Verify models can be created/queried
 
 **Checkpoints:**
 - Database tables created

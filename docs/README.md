@@ -7,6 +7,9 @@ Welcome to the sound-radar-classifier documentation. This project implements an 
 - [Architecture Overview](architecture.md) - System design and component breakdown
 - [Task Details](tasks.md) - Detailed breakdown of all project tasks
 - [Setup Guide](setup.md) - How to run the project locally
+- [Roadmap](roadmap.md) - Project roadmap and milestones
+- [PRD](PRD.md) - Product requirements document
+- [Collaboration](collaboration.md) - How to contribute
 
 ## What is Sound Radar Classifier?
 
