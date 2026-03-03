@@ -1,17 +1,20 @@
 from sound_radar_classifier.features.radar.routes import router as radar_router
 from sound_radar_classifier.features.audio.routes import router as audio_router
 from sound_radar_classifier.features.settings.routes import router as settings_router
+from sound_radar_classifier.features.settings.services import seed_default_settings
 from contextlib import asynccontextmanager
 from fastapi.staticfiles import StaticFiles
 from starlette.middleware.cors import CORSMiddleware
 from starlette.middleware.gzip import GZipMiddleware
 from fastapi import FastAPI
-from sound_radar_classifier.core.database import init_db
+from sound_radar_classifier.core.database import init_db, async_session_maker
 
 
 @asynccontextmanager
 async def lifespan(_: FastAPI):
     await init_db()
+    async with async_session_maker() as session:
+        await seed_default_settings(session)
     yield
 
 

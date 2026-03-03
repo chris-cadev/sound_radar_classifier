@@ -8,12 +8,12 @@ sound-radar-classifier is an acoustic localization system that uses Time Differe
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│                    FastAPI Backend                       │
+│                    FastAPI Backend                      │
 ├──────────────┬──────────────┬───────────────────────────┤
 │    Audio     │ Localization │         Radar             │
-│  (PyAudio)   │   (TDOA)     │    (WebSocket)             │
+│  (PyAudio)   │   (TDOA)     │    (WebSocket)            │
 ├──────────────┴──────────────┴───────────────────────────┤
-│              SQLAlchemy Async ORM                        │
+│              SQLAlchemy Async ORM                       │
 │              (SQLite / PostgreSQL)                      │
 └─────────────────────────────────────────────────────────┘
                             │
@@ -155,12 +155,12 @@ value: TEXT
 
 ### Environment Variables
 
-| Variable     | Description                            | Required                 |
-| ------------ | -------------------------------------- | ------------------------ |
-| DATABASE_URL | SQLite or PostgreSQL connection string | Yes                      |
-| AUDIO_DEVICE | Audio device index or name             | No (default: default)   |
-| SAMPLE_RATE  | Audio sample rate (Hz)                 | No (default: 44100)     |
-| CHUNK_SIZE   | Audio chunk size                       | No (default: 1024)       |
+| Variable     | Description                            | Required              |
+| ------------ | -------------------------------------- | --------------------- |
+| DATABASE_URL | SQLite or PostgreSQL connection string | Yes                   |
+| AUDIO_DEVICE | Audio device index or name             | No (default: default) |
+| SAMPLE_RATE  | Audio sample rate (Hz)                 | No (default: 44100)   |
+| CHUNK_SIZE   | Audio chunk size                       | No (default: 1024)    |
 
 ## Security
 
